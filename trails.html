@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Trails | PathFinder Ontario</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="PathFinder Ontario Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trails.html" class="active">Find Trails</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <aside class="filter-bar">
+            <h3>Filter Trails</h3>
+            <div class="search-box">
+                <label for="trailSearch">Search</label>
+                <input type="text" id="trailSearch" placeholder="Search by name or km...">
+            </div>
+            
+            <div class="difficulty-filters">
+                <p><strong>Difficulty</strong></p>
+                <label><input type="checkbox" class="diff-check" value="Easy"> Easy</label>
+                <label><input type="checkbox" class="diff-check" value="Moderate"> Moderate</label>
+                <label><input type="checkbox" class="diff-check" value="Hard"> Hard</label>
+            </div>
+
+            <button id="mobileFilterBtn" class="mobile-only">Show Filters</button>
+        </aside>
+
+        <section id="trailGrid" class="trail-grid">
+            <div class="loading">Loading amazing trails...</div>
+        </section>
+    </main>
+
+    <div id="trailModal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-content">
+            <button id="closeModal" aria-label="Close Modal">&times;</button>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PathFinder Ontario. Built with Vanilla JS.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

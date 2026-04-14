@@ -1,0 +1,36 @@
+.site-header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    color: #333;
+    padding: 10px 0;
+}
+
+h1{
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.logo img{
+    width: 60px;
+    height: auto;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    font-size: 1rem;
+}

@@ -8,6 +8,7 @@ body{
     display: grid;
     justify-content: stretch;
     align-content: center;
+    margin-bottom:5%;
 }
 
 .hero-subtitle{
@@ -74,6 +75,14 @@ body{
     transform: scale(2px);
 }
 
+header{
+    padding:0 5%!important;
+    background-color: #f3efd754;
+}
+
+.about-title{
+    margin-top:7%;
+}
 
 
 .site-header{
@@ -167,7 +176,7 @@ h2{
 }
 
 aside{
-    padding:0 1%;
+    padding:1% 1%;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -193,10 +202,6 @@ aside{
     gap: 20px;
     margin: 0 5%;
     flex-grow: 1;
-}
-
-.trail-cards:hover {
-    transform: translateY(-5px); /* Nice hover effect */
 }
 
 .trail-card-glass {
@@ -247,5 +252,30 @@ aside{
 }
 
 .featured-trail{
+    margin:0 10%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    gap:40px;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.about{
+    color:#fff;
+    background-color: #161616;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding:5% 20%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content{
+        align-content: center;
 }

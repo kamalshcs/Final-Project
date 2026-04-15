@@ -6,7 +6,6 @@
     <title>Find Trails | PathFinder Ontario</title>
     
     <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,25 +35,26 @@
 
     <main class="gallery-container">
         <aside class="filter-bar">
-            <h3>Filter Trails</h3>
-            <div class="search-box">
-                <label for="trailSearch">Search</label>
-                <input type="text" id="trailSearch" placeholder="Search by name or km...">
+            <h1>Filter Trails</h1>
+            <div class="search-container">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="trailSearch" class="search-trails" placeholder="Search trails...">
             </div>
             
             <div class="difficulty-filters">
-                <p><strong>Difficulty</strong></p>
-                <label><input type="checkbox" class="diff-check" value="Easy"> Easy</label>
-                <label><input type="checkbox" class="diff-check" value="Moderate"> Moderate</label>
-                <label><input type="checkbox" class="diff-check" value="Hard"> Hard</label>
+                <p style="margin:3% 0"><strong>Difficulty</strong></p>
+                <label><input type="checkbox" class="type-check" value="Easy"> Easy</label>
+                <label><input type="checkbox" class="type-check" value="Moderate"> Moderate</label>
+                <label><input type="checkbox" class="type-check" value="Hard"> Hard</label>
             </div>
 
             <button id="mobileFilterBtn" class="mobile-only">Show Filters</button>
         </aside>
 
-        <section id="trailGrid" class="trail-grid">
-            hello
-        </section>
+        <section id="trail-list" class="trail-cards"></section>
     </main>
 
     <div id="trailModal" class="modal" aria-hidden="true" role="dialog">
@@ -65,4 +65,7 @@
         </div>
     </div>
 </body>
+
+<script src="script.js"></script>
+
 </html>

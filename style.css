@@ -411,7 +411,7 @@ select option {
 
 @media (max-width: 768px) {
     .gallery-container {
-        flex-direction: column; /* Stack Filter bar on top of cards */
+        flex-direction: column; 
         margin: 0 5%;
     }
 
@@ -422,7 +422,7 @@ select option {
     }
 
     .trail-cards {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr; 
     }
 
     .site-header {
@@ -438,23 +438,54 @@ select option {
 
 /* Modal */
 
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000009c;
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The actual Modal Box */
 .modal-content {
-    background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    backdrop-filter: blur(15px); /* Blur behind the modal */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    background: #161616;
     padding: 30px;
-    color: white;
+    border-radius: 20px;
+    width: 90%; 
+    max-width: 500px;
+    max-height: 85vh;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(150, 150, 150, 0.4);
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 1rem;
+    color:#fff;
 }
 
 .weather-widget {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 15px;
     border-radius: 12px;
-    margin-top: 20px;
+    margin-top: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color:#fff;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 1rem;
+    overflow-y: auto;
+}
+
+.weather-widget p h3{
+    margin:2px 0;
 }
 
 .weather-details {
@@ -464,7 +495,91 @@ select option {
 }
 
 .temp {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     margin: 0;
+}
+
+#closeModal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modal-img{
+    width: 100%;           
+    height: 200px;         
+    object-fit: cover;    
+    display: block;
+    border-radius: 8px; 
+}
+
+.trail-name-city{
+    color:#fff;
+    font-size: 1.3rem;
+}
+
+.modal-close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.weather-widget h3{
+    margin:2px 0;
+}
+
+.close-btn{
+    background-color: transparent;
+    box-shadow:#16161600 ;
+    border-color: #00000000;
+    padding:2px;
+}
+
+
+
+
+/* Hide burger icon on desktop */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none; 
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background: rgba(20, 20, 20, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }

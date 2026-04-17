@@ -1,3 +1,15 @@
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('is-active');
+    });
+}
+
+
+
 let allTrails = [];
 const apiKey = "a0ef86923be135762510ee93dc098596";
 
@@ -35,7 +47,7 @@ function renderGallery(trailData) {
                 <h3>${trail.name}</h3>
                 <p>${trail.location} - ${trail.dist || trail.distance}</p>
                 <button type="button" class="view-trails-btn" data-name="${trail.name}">
-                    View Trail
+                    View Weather
                 </button>
             </div>
         </article>`
@@ -78,7 +90,7 @@ async function openTrailModal(trail) {
     const modal = document.getElementById('trailModal');
     const modalBody = document.getElementById('modalBody');
     
-    modal.style.display = "block";
+    modal.style.display = "flex";
     modalBody.innerHTML = "<div class='loading-spinner'>Loading trail details...</div>";
 
     try {
@@ -88,9 +100,12 @@ async function openTrailModal(trail) {
         const weatherData = await weatherResponse.json();
 
         modalBody.innerHTML = `
+            <div class="modal-close">
+                <button class="close-btn" id="modalCloseAction"><img src="images/close-icon.png" alt="Close" height="20"></button>
+            </div>
             <div class="modal-header">
                 <img src="images/${trail.image}" alt="${trail.name}" class="modal-img">
-                <h2>${trail.name}</h2>
+                <h2 class="trail-name-city">${trail.name}</h2>
             </div>
             <div class="modal-info">
                 <p><strong>Location:</strong> ${trail.location}</p>
@@ -100,12 +115,11 @@ async function openTrailModal(trail) {
             <div class="weather-widget">
                 <h3>Live Weather in ${trail.city || 'Ontario'}</h3>
                 <div class="weather-details">
-                    <img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png" alt="weather icon">
+                    <img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png" alt="weather icon">
                     <p class="temp">${Math.round(weatherData.main.temp)}°C</p>
                     <p class="desc">${weatherData.weather[0].description}</p>
                 </div>
             </div>
-            <button class="close-btn" id="modalCloseAction">Close Explorer</button>
         `;
 
         // Attach listener to the dynamic close button inside the modal
@@ -139,6 +153,7 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+
 
 // Start the app
 fetchTrails();

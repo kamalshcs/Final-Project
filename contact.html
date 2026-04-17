@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PathFinder Ontario | Discover Your Next Adventure</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <header class="site-header">
+            <div class="logo">
+                <img src="images/logo.gif" alt="PathFinder Ontario Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="trails.html">Find Trails</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="glass-card">
+            <p class="form-heading">Contact Ontario Wilds</p>
+            <form method="POST" class="form form-container">
+
+                <div class="form-group">
+                    <label for="user-name">Name</label>
+                    <input type="text" id="user-name" name="user_name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-email">Email</label>
+                    <input type="email" id="user-email" name="user_email" placeholder="johndoe@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Which trail did you visit?</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-message">Trail Report</label>
+                    <textarea id="user-message" name="user_message" rows="5" placeholder="Tell us about the trail conditions..." required></textarea>
+                </div>
+                <button class="report-button" type="submit">Send Report</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+        <p>&copy; 2026 PathFinder Ontario. Built with Vanilla JS & CSS.</p>
+        <div class="social-links">
+            <a href="https://github.com/kamalshcs"><img src="images/github.png" alt="GitHub" height="40" class="social-icon"></a>
+        </div>
+    </footer>
+    </body>
+
+    <script>
+        const contactForm = document.querySelector('.form');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('The form was submitted successfully!');
+            contactForm.reset();
+        });
+    </script>
+</html>

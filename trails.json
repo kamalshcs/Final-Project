@@ -1,10 +1,10 @@
 [
-    { "id": 1, "name": "Bruce Trail", "location": "Hamilton", "dist": "12km", "type": "Hard", "image": "trail1.jpg" },
-    { "id": 2, "name": "Cheltenham Badlands", "location": "Caledon", "dist": "1.5km", "type": "Easy", "image": "trail2.jpg" },
-    { "id": 3, "name": "Elora Gorge", "location": "Elora", "dist": "5km", "type": "Moderate", "image" : "trail3.jpg" },
-    { "id": 4, "name": "Scarborough Bluffs", "location": "Toronto", "dist": "4km", "type": "Easy", "image": "trail4.jpg" },
-    { "id": 5, "name": "Rattlesnake Point", "location": "Milton", "dist": "7km", "type": "Moderate", "image": "trail5.jpg" },
-    { "id": 6, "name": "Mono Cliffs", "location": "Orangeville", "dist": "8km", "type": "Moderate", "image": "trail6.jpg" },
-    { "id": 7, "name": "Algonquin Tower", "location": "Huntsville", "dist": "10km", "type": "Hard", "image": "trail7.jpg" },
-    { "id": 8, "name": "Dundas Peak", "location": "Hamilton", "dist": "3.9km", "type": "Moderate", "image": "trail8.jpg" }
+    { "id": 1, "name": "Bruce Trail", "location": "Hamilton", "city": "Hamilton", "dist": "12km", "type": "Hard", "image": "trail1.jpg" },
+    { "id": 2, "name": "Cheltenham Badlands", "location": "Caledon", "city": "Caledon", "dist": "1.5km", "type": "Easy", "image": "trail2.jpg" },
+    { "id": 3, "name": "Elora Gorge", "location": "Elora", "city": "Elora", "dist": "5km", "type": "Moderate", "image" : "trail3.jpg" },
+    { "id": 4, "name": "Scarborough Bluffs", "location": "Toronto", "city": "Toronto", "dist": "4km", "type": "Easy", "image": "trail4.jpg" },
+    { "id": 5, "name": "Niagara Glen", "location": "Niagara Falls", "city": "Niagara Falls", "dist": "3km", "type": "Moderate", "image": "trail5.jpg" },
+    { "id": 6, "name": "Rattlesnake Point", "location": "Milton", "city": "Milton", "dist": "8km", "type": "Hard", "image": "trail6.jpg" },
+    { "id": 7, "name": "Algonquin Tower", "location": "Huntsville", "city": "Huntsville", "dist": "10km", "type": "Hard", "image": "trail7.jpg" },
+    { "id": 8, "name": "Dundas Peak", "location": "Hamilton", "city": "Hamilton", "dist": "3.9km", "type": "Moderate", "image": "trail8.jpg" }
 ]

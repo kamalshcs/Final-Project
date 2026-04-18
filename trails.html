@@ -20,14 +20,20 @@
 <body>
 
     <header class="site-header">
-        <div class="logo">
+        <div class="logo" id="logo">
             <img src="images/logo.gif" alt="PathFinder Ontario Logo">
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
+
+        <button class="menu-icon-trigger" id="hamburger" aria-label="Toggle Menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <nav class="nav-container">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="trails.html">Find Trails</a></li>
-                <li><a href="weather.html">Weather</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
